@@ -1,0 +1,15 @@
+Funktionale Anforderungen: Schwimmbad – Personalplanung
+
+1. Mitarbeiterverwaltung: Das System muss ermöglichen, Mitarbeiter zu erfassen. (3 Stunden)
+
+2. Dienstplan erstellen: Das System muss ermöglichen, Dienstpläne zu erstellen.	(3 Stunden)
+
+3. Das System muss ermöglichen, Mitarbeiter bestimmten Schichten und Arbeitszeiten zuzuweisen. (3 Stunden)
+
+5. Verfügbarkeiten berücksichtigen: Das System muss die Verfügbarkeit der Mitarbeiter bei der Erstellung des Dienstplans berücksichtigen. 		(1 Stunde)
+
+10. Dienstplan bearbeiten: Das System muss ermöglichen, bereits erstellte Dienstpläne nachträglich zu bearbeiten und Mitarbeiter neu einzuteilen. 	(1 Stunde)
+
+Diese Features stellen den Absoluten Kern des Systems dar.
+
+
