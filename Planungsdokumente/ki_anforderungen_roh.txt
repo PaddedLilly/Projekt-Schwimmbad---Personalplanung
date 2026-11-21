@@ -1,0 +1,58 @@
+Prompt:
+
+He
+4. Projekt: Schwimmbad - Personalplanung
+Kurzbeschreibung: Das System unterstützt die Erstellung von Dienstplänen für Bademeister, Reinigungspersonal und andere Mitarbeiter.
+
+KI-Einsatz: Nutzen Sie ein KI-Tool, um eine Liste von mindestens 10 möglichen funktionalen Anforderungen für Ihr Projektthema zu generieren
+
+Es geht nur um diesen Teil des Systems, also nur die Erstellung von Dienstplänen
+
+Andere Teile des Systems werden nicht von mir Erstellt.
+
+
+Resonse:
+
+Hehe, das lässt sich gut eingrenzen. Du brauchst also mindestens 10 funktionale Anforderungen für ein System, das ausschließlich die Erstellung und Verwaltung von Dienstplänen für Schwimmbadpersonal übernimmt.
+
+Hier wäre eine Liste, die du direkt für deine Aufgabe verwenden kannst:
+Funktionale Anforderungen: Schwimmbad – Personalplanung
+1. Mitarbeiterverwaltung: Das System muss ermöglichen, Mitarbeiter mit Namen und ihrer jeweiligen Berufsgruppe (z. B. Bademeister, Reinigungskraft oder Kassierer) zu erfassen.
+
+2. Dienstplan erstellen: Das System muss ermöglichen, Dienstpläne für einen frei wählbaren Zeitraum (z. B. eine Woche oder einen Monat) zu erstellen.
+
+3. Mitarbeiter einteilen: Das System muss ermöglichen, Mitarbeiter bestimmten Schichten und Arbeitszeiten zuzuweisen.
+
+4. Qualifikationen berücksichtigen: Das System muss bei der Dienstplanung sicherstellen, dass Mitarbeiter nur für Tätigkeiten eingeteilt werden, für die sie die erforderlichen Qualifikationen besitzen.
+
+5. Verfügbarkeiten berücksichtigen: Das System muss die Verfügbarkeit der Mitarbeiter bei der Erstellung des Dienstplans berücksichtigen.
+
+6. Mindestbesetzung sicherstellen: Das System muss überprüfen, ob für jede Schicht genügend Mitarbeiter eingeteilt sind.
+
+7. Arbeitszeit überprüfen: Das System muss die geplanten Arbeitszeiten eines Mitarbeiters erfassen und überprüfen, ob die zulässige Arbeitszeit eingehalten wird.
+
+8. Überschneidungen verhindern: Das System muss verhindern, dass ein Mitarbeiter mehreren Schichten zugewiesen wird, die sich zeitlich überschneiden.
+
+9. Pausen berücksichtigen: Das System muss bei der Erstellung des Dienstplans die vorgeschriebenen Pausenzeiten berücksichtigen.
+
+10. Dienstplan bearbeiten: Das System muss ermöglichen, bereits erstellte Dienstpläne nachträglich zu bearbeiten und Mitarbeiter neu einzuteilen.
+
+11. Dienstplan speichern: Das System muss ermöglichen, erstellte Dienstpläne dauerhaft zu speichern und zu einem späteren Zeitpunkt wieder aufzurufen.
+
+12. Dienstplan exportieren: Das System muss ermöglichen, fertige Dienstpläne beispielsweise als PDF zu exportieren und auszudrucken.
+
+13. Automatische Dienstplanung: Das System soll auf Grundlage der Mitarbeiterverfügbarkeiten, Qualifikationen und benötigten Personalstärke automatisch einen Dienstplan erstellen können.
+
+14. Urlaubszeiten berücksichtigen: Das System muss hinterlegte Urlaubszeiten bei der Dienstplanung berücksichtigen und verhindern, dass Mitarbeiter während ihres Urlaubs eingeteilt werden.
+
+Kleine Anmerkung für deine Abgabe:
+
+Ich würde insbesondere die Anforderungen 1 bis 14 beibehalten, wenn du möglichst viele Auswahlmöglichkeiten haben möchtest. Falls du später priorisieren musst, sind diese besonders zentral:
+- Dienstplan erstellen
+- Mitarbeiter Schichten zuweisen
+- Verfügbarkeiten berücksichtigen
+- Qualifikationen berücksichtigen
+- Mindestbesetzung sicherstellen
+- Arbeitszeit und Pausen überprüfen
+- Dienstplan bearbeiten und speichern
+Wichtig ist auch die Abgrenzung: Mitarbeiterverwaltung, Urlaubsverwaltung oder Zeiterfassung sind hier keine eigenständigen Systembereiche. Du berücksichtigst lediglich die dafür benötigten Informationen bei der Dienstplanerstellung. Genau das hält dein Projekt schön innerhalb seines vorgesehenen Umfangs.
