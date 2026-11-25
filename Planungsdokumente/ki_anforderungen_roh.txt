@@ -9,9 +9,9 @@ KI-Einsatz: Nutzen Sie ein KI-Tool, um eine Liste von mindestens 10 möglichen f
 Es geht nur um diesen Teil des Systems, also nur die Erstellung von Dienstplänen
 
 Andere Teile des Systems werden nicht von mir Erstellt.
+0
 
-
-Resonse:
+Response:
 
 Hehe, das lässt sich gut eingrenzen. Du brauchst also mindestens 10 funktionale Anforderungen für ein System, das ausschließlich die Erstellung und Verwaltung von Dienstplänen für Schwimmbadpersonal übernimmt.
 
