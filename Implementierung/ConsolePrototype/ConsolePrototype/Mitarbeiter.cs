@@ -7,7 +7,7 @@ namespace ConsolePrototype
     internal class Mitarbeiter
     {
         // would have to be loaded from database
-        public static (int, string, int, int)[] mockdataMitarbeiter =
+        public static (int MitarbeiterID, string Name, int Arbeitsstunden, int ArbeitsTypID)[] mockdataMitarbeiter =
         [   (1,"Peter Kleber",    40, 1),
             (2,"Willy Weber",     30, 2),
             (3,"Hans Müller",     35, 3),
@@ -43,10 +43,14 @@ namespace ConsolePrototype
             //TODO this would add the object to the database
         }
 
-        public static Mitarbeiter FindByID(int id)
+        public static Mitarbeiter? FindByID(int id)
         {
-            //TODO implement
-            return new("Peter Kleber", 40, 1);
+            foreach (var m in mockdataMitarbeiter)
+            {
+                if (m.MitarbeiterID == id) return new(m.Name, m.ArbeitsTypID, m.Arbeitsstunden);
+            }
+            return null;
+
         }
 
 

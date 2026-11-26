@@ -6,6 +6,7 @@ namespace ConsolePrototype
 {
     internal class Schicht
     {
+        //mockdata this would have to be loaded from the database
         public static (int SchichtID, string Name, DateOnly Datum, TimeOnly BeginnZeit, TimeOnly EndZeit, List<int> Personalbedarf)[] mockdataSchicht =
         [(1, "Montag Morgen", new DateOnly(2026, 11, 30), new TimeOnly(8, 0), new TimeOnly(16, 0), new List<int>()),
          (2, "Montag Morgen", new DateOnly(2026, 11, 30), new TimeOnly(12, 0), new TimeOnly(20, 0), new List<int>()),
@@ -37,10 +38,15 @@ namespace ConsolePrototype
             //TODO this would add m.MitarbeiterID to Besetzung in Database
         }
 
-        public static Schicht FindByID(int id)
+        public static Schicht? FindByID(int id)
         {
-            //TODO implement
-            return new("Montag Morgen", new DateOnly(2026, 11, 30), new TimeOnly(8, 0), new TimeOnly(16, 0), new List<int>());
+            //TODO implement 
+
+            foreach (var s in mockdataSchicht)
+            {
+                if (s.SchichtID == id) return new(s.Name, s.Datum, s.BeginnZeit, s.EndZeit, s.Personalbedarf);
+            }
+            return null;
         }
     }
 }

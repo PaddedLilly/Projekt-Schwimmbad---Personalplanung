@@ -28,6 +28,12 @@ namespace ConsolePrototype
                             break;
                         }
 
+                    case ProgramState.EditMitarbeitersMenu:
+                        {
+                            EditMitarbeiterMenuLogic();
+                            break;
+                        }
+
                     case ProgramState.AddShiftMenu:
                         {
                             AddShiftMenuLogic();
@@ -43,6 +49,8 @@ namespace ConsolePrototype
                 }
             }
         }
+
+
 
         static void MainMenuLogic(){
             Console.Clear();
@@ -64,6 +72,7 @@ namespace ConsolePrototype
                     programState = ProgramState.AddMitarbeiterMenu;
                     break;
                 case "2":
+                    programState = ProgramState.EditMitarbeitersMenu;
                     break;
                 case "3":
                     programState = ProgramState.AddShiftMenu;
@@ -134,6 +143,14 @@ namespace ConsolePrototype
             Mitarbeiter mitarbeiter = new(name, (int)workTypeID, (int)arbeitsStunden);
             mitarbeiter.AddToDatabase();
 
+            programState = ProgramState.MainMenu;
+        }
+
+        private static void EditMitarbeiterMenuLogic()
+        {
+            Console.Clear();
+            Console.Write("not implemented. Enter to return");
+            Console.ReadLine();
             programState = ProgramState.MainMenu;
         }
 
