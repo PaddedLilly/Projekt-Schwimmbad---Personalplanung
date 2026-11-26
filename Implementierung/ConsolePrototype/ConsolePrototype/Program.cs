@@ -6,23 +6,7 @@ namespace ConsolePrototype
         enum ProgramState { Off, MainMenu, AddMitarbeiterMenu, EditMitarbeitersMenu, AddShiftMenu, EditShiftMenu, AddMitarbeiterToShiftMenu }
         static ProgramState programState = ProgramState.MainMenu;
 
-        static (string, int, int)[] mockdataMitarbeiter =
-        [("Peter Kleber",    40, 1),
-        ("Willy Weber",     30, 2),
-        ("Hans Müller",     35, 3),
-        ("Klaus Schmidt",   40, 1),
-        ("Sabine Fischer",  25, 4),
-        ("Monika Schneider",30, 2),
-        ("Thomas Becker",   38, 5),
-        ("Uwe Hoffmann",    20, 4),
-        ("Michael Wagner",  40, 1),
-        ("Stefan Bauer",    35, 2),
-        ("Andrea Richter",  30, 4),
-        ("Petra Klein",     25, 5),
-        ("Frank Wolf",      40, 3),
-        ("Jürgen Schröder", 38, 1),
-        ("Claudia Neumann", 30, 2),
-        ("Markus Schwarz",  35, 4)];
+        
         static void Main(string[] args)
         {
             
@@ -146,7 +130,10 @@ namespace ConsolePrototype
                     Console.ReadLine();
                 }
             }
-            //TODO add name, arbeitsTyp, arbeitsstunden into the Database, should add a new class for that
+
+            Mitarbeiter mitarbeiter = new(name, (int)workTypeID, (int)arbeitsStunden);
+            mitarbeiter.AddToDatabase();
+
             programState = ProgramState.MainMenu;
         }
 
@@ -155,7 +142,7 @@ namespace ConsolePrototype
             //read out Name
             Console.Clear();
             Console.Write("Benennen Sie die Schicht (z.B: Montag Morgen):");
-            string? Name = Console.ReadLine();
+            string? name = Console.ReadLine();
 
             //read out Date
             DateOnly? datum = null;
@@ -225,7 +212,8 @@ namespace ConsolePrototype
                     }
                 }
             }
-            //TODO add name, date, beginnZeit, endZeit and personalbedarf into the Database, should add a new class for that
+            Schicht schicht = new(name, (DateOnly)datum, (TimeOnly)beginnZeit, (TimeOnly)endZeit, personalbedarf);
+            schicht.AddToDatabase();
             programState = ProgramState.MainMenu;
         }
 
@@ -236,7 +224,7 @@ namespace ConsolePrototype
             {
                 Console.Clear();
                 int counter = 1;
-                foreach (object o in mockdataMitarbeiter)
+                foreach (object o in Mitarbeiter.mockdataMitarbeiter) 
                 {
                     Console.WriteLine(Convert.ToString(counter++) + ": " + o);
                 }
@@ -254,6 +242,36 @@ namespace ConsolePrototype
                     Console.ReadLine();
                 }
             }
+
+
+            int? schichtID = null;
+            while (schichtID == null)
+            {
+                Console.Clear();
+                int counter = 1;
+                foreach (object o in Schicht.mockdataSchicht)
+                {
+                    Console.WriteLine(Convert.ToString(counter++) + ": " + o);
+                }
+                Console.Write("Schicht Auswählen:");
+
+                try
+                {
+                    schichtID = Convert.ToInt32(Console.ReadLine());
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.Clear();
+                    Console.Write("Fehlerhafte Eingabe. Int erwartet");
+                    Console.ReadLine();
+                }
+            }
+
+            Schicht schicht = Schicht.FindByID((int)schichtID);
+            Mitarbeiter mitarbeiter = Mitarbeiter.FindByID((int)mitarbeiterID);
+            schicht.AddMitarbeiter(mitarbeiter);
+
             programState = ProgramState.MainMenu;
         }
     }
